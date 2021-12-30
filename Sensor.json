@@ -3,7 +3,7 @@
   "temperatura": {
     "value": 50,
     "type": "Property",
-    "unitCode": "5K",
+    "unitCode": "CEL",
     "observedAt": "2021-12-30T13:20:16.388Z"
     },
   "@context": "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/Sensor-Simples/main/sensor-ngsi.jsonld"
