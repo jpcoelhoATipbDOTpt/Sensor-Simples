@@ -1,0 +1,42 @@
+# Sensor Simples, @2021
+# 
+
+openapi: 3.0.0
+
+# General Data Model Information
+info:
+  title: Sensor Simples
+  description: Data model for the siBIO component developped under the BIOMA project
+  version: 0.0.1
+  
+components:
+  schemas: 
+    Sensor:
+      title: Node
+      type: object
+      description: Describes a given node within an asset
+      properties:
+        id:
+          description: Measurement node identifier
+          type: string
+          format: uri
+          example: urn:Sensor:SensorNbr
+          x-ngsi:
+              type: Property
+        energyConsumption:
+          description: Tempertura em ºC
+          type: number
+          x-ngsi:
+            type: Property
+          units: C               
+
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/ld+json:
+              schema:
+                type: object
