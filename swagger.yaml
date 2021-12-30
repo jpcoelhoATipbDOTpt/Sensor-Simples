@@ -10,24 +10,25 @@ info:
   version: 0.0.1
   
 components:
-  schemas: 
-    title: Node
-    type: object
-    description: Describes a given node within an asset
-    properties:
-      id:
-        description: Measurement node identifier
-        type: string
-        format: uri
-        example: urn:Sensor:SensorNbr
-        x-ngsi:
+  schemas:
+    Sensor:
+      title: Sensor
+      type: object
+      description: Descreve o sensor de temperatura
+      properties:
+        id:
+          description: Identificador do sensor
+          type: string
+          format: uri
+          example: urn:Sensor:SensorNbr
+          x-ngsi:
+              type: Property
+        temperatura:
+          description: Valor da tempertura em ºC
+          type: number
+          x-ngsi:
             type: Property
-      energyConsumption:
-        description: Tempertura em ºC
-        type: number
-        x-ngsi:
-          type: Property
-          units: DEGC               
+            units: DEGC               
 
 paths:
   /ngsi-ld/v1/entities:
