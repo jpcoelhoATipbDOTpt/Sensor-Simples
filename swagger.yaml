@@ -6,29 +6,28 @@ openapi: 3.0.0
 # General Data Model Information
 info:
   title: Sensor Simples
-  description: Data model for the siBIO component developped under the BIOMA project
+  description: Modelo de dados para um simples sensor te temperatura
   version: 0.0.1
   
 components:
   schemas: 
-    Sensor:
-      title: Node
-      type: object
-      description: Describes a given node within an asset
-      properties:
-        id:
-          description: Measurement node identifier
-          type: string
-          format: uri
-          example: urn:Sensor:SensorNbr
-          x-ngsi:
-              type: Property
-        energyConsumption:
-          description: Tempertura em ºC
-          type: number
-          x-ngsi:
+    title: Node
+    type: object
+    description: Describes a given node within an asset
+    properties:
+      id:
+        description: Measurement node identifier
+        type: string
+        format: uri
+        example: urn:Sensor:SensorNbr
+        x-ngsi:
             type: Property
-          units: C               
+      energyConsumption:
+        description: Tempertura em ºC
+        type: number
+        x-ngsi:
+          type: Property
+          units: DEGC               
 
 paths:
   /ngsi-ld/v1/entities:
