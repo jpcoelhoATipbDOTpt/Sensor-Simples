@@ -1,5 +1,6 @@
 {
   "id": "urn:Sensor:Sensor001",
+  "type": "Sensor-Simples",
   "temperatura": {
     "value": 50,
     "type": "Property",
